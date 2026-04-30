@@ -34,5 +34,60 @@ DB_PASSWORD=$(openssl rand -base64 16)
 JWT_SECRET=$(openssl rand -base64 32)
 EOF
 
+Access
+
+    Web App: http://localhost:3001
+    API: http://localhost:3000
+    Database: localhost:5432
+
+📖 Usage
+
+    Take a screenshot of your InBody scale or Glucose meter
+    Upload to FitMi via web interface
+    OCR automatically extracts all measurements (10-30 seconds)
+    Review and edit extracted data if needed
+    Save to database - comparisons generated automatically
+    View trends in graphs and charts
+
+🔧 API Endpoints
+OCR Extraction
+
+    POST /api/ocr/auto - Auto-detect & extract
+    POST /api/ocr/inbody - Extract InBody data
+    POST /api/ocr/glucose - Extract Glucose data
+
+Data Management
+
+    POST /api/inbody/save - Save InBody record
+    GET /api/inbody/:startDate/:endDate - Get InBody records
+    POST /api/glucose/save - Save Glucose record
+    GET /api/glucose/:startDate/:endDate - Get Glucose records
+
+Comparison
+
+    GET /api/inbody/compare/:startDate/:endDate - Compare InBody changes
+
+🐳 Docker Management
+View Logs
+bash
+
+docker-compose logs -f backend
+
+Restart Services
+bash
+
+docker-compose restart
+
+Stop All Services
+bash
+
+docker-compose down
+
+Full Reset
+bash
+
+docker-compose down -v
+docker-compose up -d
+
 # Start application
 docker-compose up -d
