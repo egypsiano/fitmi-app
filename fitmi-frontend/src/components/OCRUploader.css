@@ -1,0 +1,92 @@
+.ocr-uploader {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.upload-section {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.type-selector {
+  margin: 15px 0;
+}
+
+.type-selector select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.file-input {
+  display: block;
+  margin: 15px 0;
+  padding: 10px;
+}
+
+.btn-extract, .btn-save {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.btn-extract:hover, .btn-save:hover {
+  background: #0056b3;
+}
+
+.btn-extract:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.form-section {
+  background: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.date-input {
+  margin-bottom: 20px;
+}
+
+.date-input input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+.form-group input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
