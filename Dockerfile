@@ -2,7 +2,7 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-# Install Tesseract OCR
+# Install Tesseract OCR 
 RUN apk add --no-cache \
     tesseract-ocr \
     tesseract-ocr-data-eng \
